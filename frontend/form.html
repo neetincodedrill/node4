@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Registration</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    </head>
+        <body>
+
+      <header>
+          <div class="container">
+              <h2>User Information</h2>
+              <p>Enter the required information below to register.You can change it anytime you want</p>
+          </div>
+      </header>
+
+      <main>
+        <div class="container">
+           <form >
+               <div class="user-info">
+                  
+                <h4>Full name</h4> 
+                <div class="full_name">
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name" required autocomplete="off" />
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name" required autocomplete="off" />
+                </div>
+                <h4>Email address</h4> 
+                <div class="email">
+                  <input type="email" name="email" id="email" placeholder="username@domain.com" required autocomplete="off" />
+              </div>
+              <h4>Select your gender</h4> 
+              <div class="gender">               
+                  <input type="radio" id="male" name="gender" value="Male">
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" name="gender" value="Female">
+                  <label for="female">Female</label><br>
+                  <input type="radio" id="non-binary" name="gender" value="Non-binary">
+                  <label for="non-binary">Non-binary</label>
+              </div>
+              <!-- <input type="file" name="file" id="file">
+              <div class="image-preview" id="imagePreview">
+                  <img src="" alt="Image Preview" class="image-preview_image">
+                  <span class="image-preview_default-text">Image Preview</span>
+              </div> -->
+             
+            </div>
+
+            <div class="address-section">
+                <h4>Address</h4> 
+                <div class="address">
+                    <input type="text" name="country" id="country" placeholder="Country" required autocomplete="off" />
+                    <input type="text" name="state" id="state" placeholder="State" required autocomplete="off" />
+                    <input type="text" name="city" id="city" placeholder="City" required autocomplete="off" />
+                    <input type="text" name="zip" id="zip" placeholder="Zip" required autocomplete="off" />
+                </div>
+
+                <div class="button">
+                    <a href="#add more address">Add more address</a>
+                </div>
+               
+                <div class="more address">
+                </div>
+            </div>
+             
+           </form>
+           <div class="submit-button">
+            <a href="#submit">Save</a>
+        </div>
+        </div>
+      </main>
+
+      <script>
+        //   const inpfile = document.getElementById('file');
+        //   const previewContainer = document.getElementById('imagePreview');
+        //   const previewImage = previewContainer.querySelector(".image-preview_image");
+        //   const previewDefaultText = previewContainer.querySelector(".image-preview_default-text")
+
+        //   inpfile.addEventListener("change",function(){
+        //       const file = this.files[0];
+        //       if(file){
+        //           const reader = new FileReader();
+        //           previewDefaultText.style.display = "none";
+        //           previewImage.style.display = "block";
+
+        //           reader.addEventListener("load",function(){
+        //               console.log(this);
+        //               previewImage.setAttribute('src',this.result)
+        //           })
+        //           reader.readAsDataURL(file)
+        //       }else{
+        //           previewDefaultText.style.display  = null;
+        //           previewImage.style.display = null;
+        //       }
+        //   })
+    </script>
+
+    </body>
+</html>
