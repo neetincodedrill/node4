@@ -4,6 +4,10 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+header{
+    margin-bottom:20px
+}
+
 .container{
     max-width: 90%;
     margin-left: auto;
@@ -93,6 +97,32 @@ input[type=text]:focus,input[type=email]:focus {
     margin-left:10px
 }
 
+.address input{
+    padding: 10px 10px;
+    font-size:15px;
+    color:rgb(136, 130, 130);
+    border-radius: 5px;
+    border: 1px solid #abb2b8;
+    transition: 0.5s;
+}
+
+.address #country1 {
+    min-width:450px;
+    margin-bottom:15px
+}
+
+.address #state1,.address #city1{
+    max-width:140px
+}
+
+.address #zip1{
+    max-width:100px
+}
+
+#city1 , #zip1{
+    margin-left:10px
+}
+
 .button{
     margin-top:20px;
     background-color:#223777;
@@ -115,17 +145,17 @@ form{
 
 .address-section{
     flex:1;
-    margin-left: 20px;
+    margin-left: auto;
 }
 
 .submit-button{
     max-width:150px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20px;
+    margin-top:10px;
     background-color:#0F52BA;
     text-align: center;
-     border-radius: 5px;
+    border-radius: 5px;
     padding: 12px 0px;
     font-size:18px;
    
@@ -152,5 +182,163 @@ form{
     display:none;
     width:100%
 }
+
+.addition-address{
+    margin-top:10px;
+    transition-delay: 1s;
+    transition-timing-function: ease-in;
+
+}
+
+#add-address{
+    text-align: center;
+    padding:13px 0px 13px 10px;
+   
+}
+
+.profile-image{
+    margin-top: 5px;
+}
+
+.user-image{
+    margin-left: 30%;
+    position: relative;
+}
+
+.user-image img{
+    height: 100px;
+    width:100px;
+    border-radius: 50px;
+    box-shadow: 3px 6px 8px #b3b1b1;
+}
+
+.file-icon i{
+    position:absolute;
+    left: 23%;
+    top: 36%;
+}
+
+.file-icon i{
+    background-color:#0F52BA; ;
+    padding:11px;
+    border-radius: 20px;
+    color:white
+}
+#file{
+    display: none;
+    visibility: none;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #777;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 1px 0.5px 5px #a0a4a7;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+  
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+}
+  
+.dropdown-links {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    max-height: 300px;
+    min-width:445px;
+    overflow-y: scroll;
+}
+  
+.login-form > input {
+    margin-bottom: .5rem;
+}
+
+.dropdown-links .link{
+    padding-top: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dropdown-links::-webkit-scrollbar {
+    display: none;
+}
+
+.dropdown{
+  max-width:470px;
+  border: 1px solid #abb2b8;
+  border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  margin-bottom:15px
+}
+
+.dropdown-menu{
+  margin-top:10px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.dropdown:hover{
+  box-shadow: 1px 0.5px 5px #4682B4;
+}
+
+.dropdown input{
+  color:rgb(136, 130, 130);
+}
+
+.dropdown-links a{
+  padding-left:20px;
+  padding-bottom: 10px;
+}
+
+.dropdown-links a:hover{
+ background-color: rgb(240, 236, 236);
+ color:#267fc9;
+ border-radius: 5px;
+}
+
+input[type=button]{
+    border:none
+}
+
+.message{
+    color:#7c827c;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size:17px;
+    margin-bottom: 5px
+}
+
+.message p{
+    margin-bottom:5px;
+    margin-top:8px
+}
+
+
 
 

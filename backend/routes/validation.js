@@ -32,12 +32,10 @@ function emailformatvalidation(email){
 
     // Further checking of some things regex can't handle
     var parts = email.split("@");
-    console.log(parts)
     if(parts[0].length>64)
         return false;
 
     var domainParts = parts[1].split(".");
-    console.log(domainParts)
     if(domainParts.some(function(part) { return part.length>63; }))
         return false;
 

@@ -8,7 +8,7 @@ const { dataValidation, emailformatvalidation } = require("./validation");
 //collection name
 const userinfo = dbo.collection("info");
 const addressinfo = dbo.collection("address");
-const country = dbo.collection('countries');
+const country = dbo.collection('country');
 
 // storing file in upload folder and changing path name
 var storage = multer.diskStorage({
@@ -58,6 +58,25 @@ router.get("/", async (req, res, next) => {
   );
   res.status(200).send(data);
 });
+
+//get request to get all the countries from country collection
+router.get('/country',async(req,res,next) => {
+  try{
+    const allCountry = await country.find({}).toArray();
+    const data = await Promise.all(
+      allCountry.map(async (element) => {
+        const countryInfo = {
+          name: element.name,
+          code: element.code
+        }
+        return countryInfo
+      })
+    )
+    res.status(200).send(data)   
+  }catch(err){
+      res.send(err)
+  }
+})
 
 //post request to post user data
 router.post("/", async (req, res) => {
@@ -135,7 +154,7 @@ router.post("/", async (req, res) => {
                 error.push(element);
                 }
             });
-            res.status(400).send(error);
+            res.status(401).send(error);
             }
         }
         } catch (err) {
@@ -145,19 +164,6 @@ router.post("/", async (req, res) => {
   });
 });
 
-//routes to post countries
-router.post('/country',async(req,res,next) => {
-    try{
-       const country = {
-           name : req.body.name,
-           zip : req.body.zip
-       }
-       const countryName = await country.insertOne(country);
-       res.status(201).send('')
 
-    }catch(err){
-        res.send(err)
-    }
-})
 
 module.exports = router;
