@@ -97,7 +97,6 @@ router.post("/", async (req, res) => {
         const state = req.body.state;
         const city = req.body.city;
         const zip = req.body.zip;
-        const country1 = req.body.country1;
         const state1 = req.body.state1;
         const city1 = req.body.city1;
         const zip1 = req.body.zip1;
@@ -117,13 +116,11 @@ router.post("/", async (req, res) => {
 
         const address1 = [
             {
-            country: country,
             state: state,
             city: city,
             zip: zip,
             },
             {
-            country: country1,
             state: state1,
             city: city1,
             zip: zip1,
@@ -132,6 +129,7 @@ router.post("/", async (req, res) => {
 
         const addressData = {
             email: email,
+            country:country,
             address: address1,
         };
 
@@ -144,7 +142,7 @@ router.post("/", async (req, res) => {
         if (emailduplication && addressDuplication) {
             res.status(400).send("User with same emailid already exits");
         } else {
-            if (fieldValidation[0] === true && fieldValidation[0] === true) {
+            if (fieldValidation[0] === true && fieldValidation[1] === true) {
             const newUser = await userinfo.insertOne(data);
             const userAddress = await addressinfo.insertOne(addressData);
             res.status(201).send("New user created");

@@ -106,21 +106,25 @@ input[type=text]:focus,input[type=email]:focus {
     transition: 0.5s;
 }
 
-.address #country1 {
-    min-width:450px;
-    margin-bottom:15px
-}
-
-.address #state1,.address #city1{
+.addition-address #state1,.addition-address #city1{
     max-width:140px
 }
 
-.address #zip1{
+.addition-address #zip1{
     max-width:100px
 }
 
 #city1 , #zip1{
     margin-left:10px
+}
+
+.addition-address input{
+    padding: 10px 10px;
+    font-size:15px;
+    color:rgb(136, 130, 130);
+    border-radius: 5px;
+    border: 1px solid #abb2b8;
+    transition: 0.5s;
 }
 
 .button{
@@ -337,6 +341,16 @@ input[type=button]{
 .message p{
     margin-bottom:5px;
     margin-top:8px
+}
+
+.message .success{
+    color:#357b39;
+    font-size: 18px;
+}
+
+.message .error{
+    color:#b20600;
+    font-size: 18px;
 }
 
 
